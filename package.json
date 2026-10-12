@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "diag": "whoami; ps -u $(whoami) -o pid,etime,args | grep -v grep | grep -iE 'node|lsnode'",
+    "kill-node": "pkill -u $(whoami) -f lsnode; echo listo",
+    "logs": "tail -n 50 stderr.log 2>/dev/null; ls -la; ls dist/server 2>/dev/null",
+    "git-check": "git ls-remote --heads origin 2>&1 | sed 's#//[^@]*@#//***@#'"
   },
   "dependencies": {
     "@astrojs/node": "^11.1.6",
