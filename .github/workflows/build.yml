@@ -19,7 +19,8 @@ jobs:
       - run: npm run build
       - name: Preparar release
         run: |
-          mkdir release
+          mkdir -p release/tmp
+          date > release/tmp/restart.txt
           cp -r dist package.json package-lock.json app.cjs release/
       - uses: peaceiris/actions-gh-pages@v4
         with:
