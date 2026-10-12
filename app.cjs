@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
     <html lang="es">
     <head><meta charset="utf-8"><title>DEV COOPOL</title></head>
     <body style="font-family:sans-serif;text-align:center;margin-top:80px">
-      <h1>dev.coopol.com.do funcionando ✅</h1>
+      <h1>dev.coopol.com.do</h1>
       <p>Node ${process.version} | Modo: ${process.env.NODE_ENV}</p>
       <a href="/api/health">Probar /api/health</a>
     </body>
